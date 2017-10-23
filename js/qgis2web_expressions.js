@@ -757,7 +757,7 @@ function WaterATMs1rule0_eval_expression(context) {
 
     var feature = context.feature;
     
-    return ((feature.properties['Entity']  == 'Dr Water') && (feature.properties['Tested?']  == 'yes'));
+    return ((feature.properties['Entity']  == 'Dr Water') && (feature.properties['Tested?']  != 'not yet'));
 }
 
 
@@ -775,7 +775,7 @@ function WaterATMs1rule2_eval_expression(context) {
 
     var feature = context.feature;
     
-    return (((feature.properties['Entity']  == 'other') || (feature.properties['Entity']  == 'Selco')) && (feature.properties['Tested?']  == 'yes'));
+    return (((feature.properties['Entity']  == 'other') || (feature.properties['Entity']  == 'Selco')) && (feature.properties['Tested?']  != 'not yet'));
 }
 
 
